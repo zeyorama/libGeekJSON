@@ -41,7 +41,7 @@ namespace GeekJSON
   {
     char integer[ 12 ];
 
-    memset( integer, '\0', sizeof( char ) * 11 );
+    memset( integer, '\0', sizeof( char ) * 12 );
 
     sprintf( integer, "%i", m_Value );
 
