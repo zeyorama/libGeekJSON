@@ -26,7 +26,7 @@ namespace GeekJSON
 /* ************************************************** */
 /* ************************************************** */
   void
-  JSONObject::Set( const string& Key, const JSONValue * Value )
+  JSONObject::Set( const string& Key, JSONValue * Value )
   {
     m_Fields.insert( pair< string, JSONValue* >( Key, Value ) );
   }

@@ -34,7 +34,7 @@ namespace GeekJSON
   void
   JSONArray::Clear( void )
   {
-    for ( JSONValue * Value : m_List ) delete m_List;
+    for ( JSONValue * Value : m_List ) delete Value;
 
     m_List.clear();
   }

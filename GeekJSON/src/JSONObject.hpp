@@ -40,7 +40,7 @@ namespace GeekJSON
     ~JSONObject( void );
 
     void
-    Set( const std::string&, const JSONValue* );
+    Set( const std::string&, JSONValue* );
 
     std::string
     Generate( void ) override;
