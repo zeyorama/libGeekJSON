@@ -37,7 +37,7 @@ namespace GeekJSON
   }
 
   string
-  JSONInteger::Generate( void )
+  JSONInteger::Generate( const unsigned int )
   {
     char integer[ 12 ];
 

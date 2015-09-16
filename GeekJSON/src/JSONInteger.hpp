@@ -50,7 +50,7 @@ namespace GeekJSON
     Get( void ) const;
 
     std::string
-    Generate( void ) override;
+    Generate( const unsigned int ) override;
 
   protected:
   private:

@@ -1,4 +1,4 @@
-#include "JSONString.hpp"
+#include "JSONBoolean.hpp"
 
 using namespace std;
 
@@ -10,11 +10,11 @@ namespace GeekJSON
   /* **************** CON-/DESTRUCTORS  *************** */
   /* ************************************************** */
   /* ************************************************** */
-  JSONString::JSONString( const string& Value ) :
+  JSONBoolean::JSONBoolean( const bool& Value ) :
     JSONValue(),
     m_Value( Value ) { return; }
 
-  JSONString::~JSONString( void ) { return; }
+  JSONBoolean::~JSONBoolean( void ) { return; }
 
 /* ************************************************** */
 /* ************************************************** */
@@ -22,21 +22,21 @@ namespace GeekJSON
 /* ************************************************** */
 /* ************************************************** */
   void
-  JSONString::Set( const std::string& Value )
+  JSONBoolean::Set( const bool& Value )
   {
     m_Value = Value;
   }
 
-  string
-  JSONString::Generate( const unsigned int )
-  {
-    return "\"" + m_Value + "\"";
-  }
-
-  const string&
-  JSONString::Get( void ) const
+  const bool&
+  JSONBoolean::Get( void ) const
   {
     return m_Value;
+  }
+
+  string
+  JSONBoolean::Generate( const unsigned int )
+  {
+    return m_Value ? "true" : "false";
   }
 
 /* ************************************************** */

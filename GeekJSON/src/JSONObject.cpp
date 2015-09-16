@@ -32,21 +32,23 @@ namespace GeekJSON
   }
 
   string
-  JSONObject::Generate( void )
+  JSONObject::Generate( const unsigned int indent )
   {
-    string  json    = "{";
+    string  json    = "{\n";
     bool    commata = false;
 
     for ( auto& pair : m_Fields )
     {
       if ( commata ) json += ",\n";
 
-      json += "\"" + pair.first + "\" : " + pair.second->Generate();
+      for ( unsigned int i = 0; i < indent; i++ ) json += " ";
+
+      json += "\"" + pair.first + "\" : " + pair.second ? pair.second->Generate( indent + 1 ) : "null";
 
       commata = true;
     }
 
-    json += "}";
+    json += "\n}";
 
     return json;
   }

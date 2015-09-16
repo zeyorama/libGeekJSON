@@ -37,7 +37,7 @@ namespace GeekJSON
   }
 
   string
-  JSONFloat::Generate( void )
+  JSONFloat::Generate( const unsigned int )
   {
     char floatingpoint[ 64 ];
 

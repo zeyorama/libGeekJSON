@@ -15,14 +15,14 @@
  misrepresented as being the original software.
  3. This notice may not be removed or altered from any source distribution.
 
- \file JSONString.hpp
+ \file JSONBoolean.hpp
 
  Created on: Sep 16, 2015
  \author     fkzey
  */
 
-#ifndef JSONSTRING_HPP_
-#define JSONSTRING_HPP_
+#ifndef JSONBOOLEAN_HPP_
+#define JSONBOOLEAN_HPP_
 
 #include "JSONValue.hpp"
 
@@ -31,28 +31,28 @@
 namespace GeekJSON
 {
 
-  class JSONString : public JSONValue
+  class JSONBoolean : public JSONValue
   {
   public:
-    JSONString( const std::string& );
+    JSONBoolean( const bool& );
     virtual
-    ~JSONString( void );
+    ~JSONBoolean( void );
 
     void
-    Set( const std::string& );
+    Set( const bool& );
+
+    const bool&
+    Get( void ) const;
 
     std::string
     Generate( const unsigned int ) override;
 
-    const std::string&
-    Get( void ) const;
-
   protected:
   private:
-    std::string m_Value;
+    bool  m_Value;
 
   };
 
 } /* namespace GeekJSON */
 
-#endif /* JSONSTRING_HPP_ */
+#endif /* JSONBOOLEAN_HPP_ */

@@ -35,7 +35,7 @@ namespace GeekJSON
     JSONValue( void ) { return; }
     virtual ~JSONValue( void ) { return; }
 
-    virtual std::string Generate( void ) = 0;
+    virtual std::string Generate( const unsigned int ) = 0;
 
   protected:
   private:

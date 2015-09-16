@@ -52,21 +52,23 @@ namespace GeekJSON
   }
 
   string
-  JSONArray::Generate( void )
+  JSONArray::Generate( const unsigned int indent )
   {
-    string  json    = "[";
+    string  json    = "[\n";
     bool    commata = false;
 
     for ( JSONValue * Value : m_List )
     {
-      if ( commata ) json += ",";
+      if ( commata ) json += ",\n";
 
-      json += Value->Generate();
+      for ( unsigned int i = 0; i < indent; i++ ) json += " ";
+
+      json += Value->Generate( indent + 1 );
 
       commata = true;
     }
 
-    json += "]";
+    json += "\n]";
 
     return json;
   }

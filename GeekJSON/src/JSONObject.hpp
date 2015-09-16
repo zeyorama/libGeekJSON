@@ -43,7 +43,7 @@ namespace GeekJSON
     Set( const std::string&, JSONValue* );
 
     std::string
-    Generate( void ) override;
+    Generate( const unsigned int ) override;
 
     JSONValue*
     Get( const std::string& );
