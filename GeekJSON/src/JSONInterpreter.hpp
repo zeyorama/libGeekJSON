@@ -33,6 +33,8 @@ namespace GeekJSON
 
   JSONObject*
   ReadFromString( const std::string& );
+  JSONObject*
+  ReadFromFile( const std::string& );
 
 } /* namespace GeekJSON */
 

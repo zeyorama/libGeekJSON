@@ -11,6 +11,8 @@
 #include <vector>
 #include <cassert>
 #include <cstring>
+#include <fstream>
+#include <iostream>
 
 using namespace std;
 
@@ -363,6 +365,17 @@ namespace GeekJSON
     }
 
     return ReadObject( &token );
+  }
+
+  JSONObject*
+  ReadFromFile( const string& JSONFile )
+  {
+    ifstream file( JSONFile );
+
+    return ReadFromString ( string( std::istreambuf_iterator<char>( file ),
+                                    std::istreambuf_iterator<char>()
+                                  )
+                          );
   }
 
 } /* namespace GeekJSON */
