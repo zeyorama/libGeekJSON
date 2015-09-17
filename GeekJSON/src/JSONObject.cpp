@@ -28,6 +28,8 @@ namespace GeekJSON
   void
   JSONObject::Set( const string& Key, JSONValue * Value )
   {
+    if ( Value == this ) return;
+
     m_Fields.insert( pair< string, JSONValue* >( Key, Value ) );
   }
 
@@ -48,7 +50,11 @@ namespace GeekJSON
       commata = true;
     }
 
-    json += "\n}";
+    json += "\n";
+
+    for ( unsigned int i = 0; i < indent - 1; i++ ) json += " ";
+
+    json += "}";
 
     return json;
   }
