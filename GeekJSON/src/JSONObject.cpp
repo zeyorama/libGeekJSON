@@ -43,7 +43,7 @@ namespace GeekJSON
     {
       if ( commata ) json += ",\n";
 
-      for ( unsigned int i = 0; i < indent; i++ ) json += " ";
+      for ( unsigned int i = 0; i < indent + 1; i++ ) json += " ";
 
       json += "\"" + pair.first + "\" : " + ( pair.second ? pair.second->Generate( indent + 1 ) : "null" );
 
@@ -52,7 +52,7 @@ namespace GeekJSON
 
     json += "\n";
 
-    for ( unsigned int i = 0; i < indent - 1; i++ ) json += " ";
+    for ( unsigned int i = 0; i < indent; i++ ) json += " ";
 
     json += "}";
 
