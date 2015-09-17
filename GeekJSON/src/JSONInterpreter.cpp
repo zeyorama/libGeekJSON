@@ -175,6 +175,10 @@ namespace GeekJSON
       {
         arr->Append( new JSONBoolean( false ) );
       }
+      else if ( tok == "null" )
+      {
+        arr->Append( 0 );
+      }
       else
       {
         vector< string > numeric = Split( tok, '.' );
@@ -217,9 +221,11 @@ namespace GeekJSON
 
       tok = tkn;
 
+      if ( tok == "}" ) break;
+
       if ( tok != "\"" )
       {
-        printf( "ERROR: Keys have to start with \"\n" );
+        printf( "ERROR: Keys have to start with \" found '%s'\n", tkn );
 
         break;
       }
@@ -310,6 +316,10 @@ namespace GeekJSON
       else if ( tok == "false" )
       {
         Value = new JSONBoolean( false );
+      }
+      else if ( tok == "null" )
+      {
+        Value = 0;
       }
       else
       {
