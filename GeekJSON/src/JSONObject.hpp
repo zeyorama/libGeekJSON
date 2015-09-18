@@ -32,6 +32,12 @@
 namespace GeekJSON
 {
 
+  class JSONArray;
+  class JSONFloat;
+  class JSONString;
+  class JSONBoolean;
+  class JSONInteger;
+
   class JSONObject : public JSONValue
   {
   public:

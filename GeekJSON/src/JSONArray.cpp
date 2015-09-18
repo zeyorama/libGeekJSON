@@ -1,5 +1,11 @@
 #include "JSONArray.hpp"
 
+#include "JSONFloat.hpp"
+#include "JSONObject.hpp"
+#include "JSONString.hpp"
+#include "JSONBoolean.hpp"
+#include "JSONInteger.hpp"
+
 using namespace std;
 
 namespace GeekJSON
