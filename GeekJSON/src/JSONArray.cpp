@@ -51,6 +51,12 @@ namespace GeekJSON
     return ( unsigned int )( m_List.size() );
   }
 
+  JSONValue*
+  JSONArray::Get( const unsigned int& Index )
+  {
+    return m_List[ Index ];
+  }
+
   string
   JSONArray::Generate( const unsigned int indent )
   {

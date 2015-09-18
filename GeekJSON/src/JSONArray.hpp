@@ -49,6 +49,9 @@ namespace GeekJSON
     unsigned int
     Count( void ) const;
 
+    JSONValue*
+    Get( const unsigned int& );
+
     std::string
     Generate( const unsigned int ) override;
 
