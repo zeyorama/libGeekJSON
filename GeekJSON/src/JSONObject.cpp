@@ -65,6 +65,42 @@ namespace GeekJSON
     return m_Fields[ Key ];
   }
 
+  JSONArray*
+  JSONObject::GetArray( const string& Key )
+  {
+    return (JSONArray*)( JSONObject::Get( Key ) );
+  }
+
+  JSONBoolean*
+  JSONObject::GetBoolean( const string& Key )
+  {
+    return (JSONBoolean*)( JSONObject::Get( Key ) );
+  }
+
+  JSONFloat*
+  JSONObject::GetFloat( const string& Key )
+  {
+    return (JSONFloat*)( JSONObject::Get( Key ) );
+  }
+
+  JSONInteger*
+  JSONObject::GetInteger( const string& Key )
+  {
+    return (JSONInteger*)( JSONObject::Get( Key ) );
+  }
+
+  JSONObject*
+  JSONObject::GetObject( const string& Key )
+  {
+    return (JSONObject*)( JSONObject::Get( Key ) );
+  }
+
+  JSONString*
+  JSONObject::GetString( const string& Key )
+  {
+    return (JSONString*)( JSONObject::Get( Key ) );
+  }
+
 /* ************************************************** */
 /* ************************************************** */
 /* *******************  PROTECTED ******************* */

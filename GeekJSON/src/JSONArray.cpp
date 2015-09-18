@@ -57,6 +57,42 @@ namespace GeekJSON
     return m_List[ Index ];
   }
 
+  JSONArray*
+  JSONArray::GetArray( const unsigned int& Index )
+  {
+    return (JSONArray*)( Get( Index ) );
+  }
+
+  JSONBoolean*
+  JSONArray::GetBoolean( const unsigned int& Index )
+  {
+    return (JSONBoolean*)( Get( Index ) );
+  }
+
+  JSONFloat*
+  JSONArray::GetFloat( const unsigned int& Index )
+  {
+    return (JSONFloat*)( Get( Index ) );
+  }
+
+  JSONInteger*
+  JSONArray::GetInteger( const unsigned int& Index )
+  {
+    return (JSONInteger*)( Get( Index ) );
+  }
+
+  JSONObject*
+  JSONArray::GetObject( const unsigned int& Index )
+  {
+    return (JSONObject*)( Get( Index ) );
+  }
+
+  JSONString*
+  JSONArray::GetString( const unsigned int& Index )
+  {
+    return (JSONString*)( Get( Index ) );
+  }
+
   string
   JSONArray::Generate( const unsigned int indent )
   {

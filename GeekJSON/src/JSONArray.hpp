@@ -51,6 +51,18 @@ namespace GeekJSON
 
     JSONValue*
     Get( const unsigned int& );
+    JSONArray*
+    GetArray( const unsigned int& );
+    JSONBoolean*
+    GetBoolean( const unsigned int& );
+    JSONFloat*
+    GetFloat( const unsigned int& );
+    JSONInteger*
+    GetInteger( const unsigned int& );
+    JSONObject*
+    GetObject( const unsigned int& );
+    JSONString*
+    GetString( const unsigned int& );
 
     std::string
     Generate( const unsigned int ) override;

@@ -115,7 +115,7 @@ namespace GeekJSON
   ReadArray( Tokenizer * token )
   {
     JSONArray * arr = new JSONArray();
-    char          tkn[ 1025 ];
+    char        tkn[ 1025 ];
 
     memset( tkn, '\0', sizeof( char ) * 1025 );
 
@@ -125,7 +125,7 @@ namespace GeekJSON
 
       string tok = tkn;
 
-      if ( tok == "]" ) return arr;
+      if ( tok == "]" ) break;
 
       if ( tok == "," ) continue;
 

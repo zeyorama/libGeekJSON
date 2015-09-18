@@ -47,6 +47,18 @@ namespace GeekJSON
 
     JSONValue*
     Get( const std::string& );
+    JSONArray*
+    GetArray( const std::string& );
+    JSONBoolean*
+    GetBoolean( const std::string& );
+    JSONFloat*
+    GetFloat( const std::string& );
+    JSONInteger*
+    GetInteger( const std::string& );
+    JSONObject*
+    GetObject( const std::string& );
+    JSONString*
+    GetString( const std::string& );
 
   protected:
   private:
