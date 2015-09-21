@@ -31,19 +31,48 @@
 namespace GeekJSON
 {
 
+  /**
+   * @brief Contains a float value.
+   * @version 1.0.0
+   * @author Frank Kevin Zey
+   * @extends GeekJSON::JSONValue
+   */
   class JSONFloat : public JSONValue
   {
   public:
+    /**
+     * @brief Initializes the JSONFloat instance.
+     * @param const int& The float value to be set.
+     * @since 1.0.0
+     */
     JSONFloat( const float& );
     virtual
     ~JSONFloat( void );
 
+    /**
+     * @brief Sets a float value.
+     * @param const float& The float value to be set.
+     * @return void
+     * @since 1.0.0
+     */
     void
     Set( const float& );
 
+    /**
+     * @brief Gets the float value.
+     * @return const float& The stored float value.
+     * @since 1.0.0
+     */
     const float&
     Get( void ) const;
 
+    /**
+     * @brief Generates the JSONFloat as string.
+     *
+     * @param const unsigned int Indentation of this value.
+     * @return std::string String-coded float.
+     * @since 1.0.0
+     */
     std::string
     Generate( const unsigned int ) override;
 

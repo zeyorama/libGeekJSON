@@ -38,31 +38,110 @@ namespace GeekJSON
   class JSONBoolean;
   class JSONInteger;
 
+  /**
+   * @brief Contains a map of key and values.
+   * @version 1.0.0
+   * @author Frank Kevin Zey
+   * @extends GeekJSON::JSONValue
+   */
   class JSONObject : public JSONValue
   {
   public:
+    /**
+     * @brief Initialize the JSONObject instance.
+     */
     JSONObject( void );
     virtual
     ~JSONObject( void );
 
+    /**
+     * @brief Sets a pair of key string and JSONValue.
+     * @param const std::string& Key of the pair
+     * @param JSONValue* Value of the pair.
+     * @return void
+     * @since 1.0.0
+     */
     void
     Set( const std::string&, JSONValue* );
 
+    /**
+     * @brief Generates the object as string and returns it.
+     *
+     * @param const unsigned int Indentation of this object.
+     * @return std::string String-coded object in JSON style.
+     * @since 1.0.0
+     * @see JSONValue::Generate()
+     */
     std::string
     Generate( const unsigned int ) override;
 
+    /**
+     * @brief Returns the value matching to the given key.
+     *
+     * @param const std::string& The key to be looking for.
+     * @return JSONValue* The value matching to the key.
+     * @since 1.0.0
+     */
     JSONValue*
     Get( const std::string& );
+
+    /**
+     * @brief Returns the array matching to the given key.
+     *
+     * @param const std::string& The key to be looking for.
+     * @return JSONArray* The array matching to the key.
+     * @since 1.0.0
+     */
     JSONArray*
     GetArray( const std::string& );
+
+    /**
+     * @brief Returns the boolean value matching to the given key.
+     *
+     * @param const std::string& The key to be looking for.
+     * @return JSONBoolean* The boolean value matching to the key.
+     * @since 1.0.0
+     */
     JSONBoolean*
     GetBoolean( const std::string& );
+
+    /**
+     * @brief Returns the float matching to the given key.
+     *
+     * @param const std::string& The key to be looking for.
+     * @return JSONFloat* The float matching to the key.
+     * @since 1.0.0
+     */
     JSONFloat*
     GetFloat( const std::string& );
+
+    /**
+     * @brief Returns the int matching to the given key.
+     *
+     * @param const std::string& The key to be looking for.
+     * @return JSONInteger* The int matching to the key.
+     * @since 1.0.0
+     */
     JSONInteger*
     GetInteger( const std::string& );
+
+    /**
+     * @brief Returns the object matching to the given key.
+     *
+     * @param const std::string& The key to be looking for.
+     * @return JSONobject* The object matching to the key.
+     * @since 1.0.0
+     */
     JSONObject*
     GetObject( const std::string& );
+
+    /**
+     * @brief Returns the string value matching to the given key.
+     *
+     * @param const std::string& The key to be looking for.
+     * @return JSONValue* The string value matching to the key.
+     * @since 1.0.0
+     */
     JSONString*
     GetString( const std::string& );
 

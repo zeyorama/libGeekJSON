@@ -31,24 +31,48 @@
 namespace GeekJSON
 {
 
-  /*
-   * GeekJSON::JSONInteger
-   *
-   *
+  /**
+   * @brief Contains a int value.
+   * @version 1.0.0
+   * @author Frank Kevin Zey
+   * @extends GeekJSON::JSONValue
    */
   class JSONInteger : public JSONValue
   {
   public:
+    /**
+     * @brief Initializes the JSONInteger instance.
+     * @param const int& The int value to be set.
+     * @since 1.0.0
+     */
     JSONInteger( const int& );
     virtual
     ~JSONInteger( void );
 
+    /**
+     * @brief Sets a int value.
+     * @param const int& The int value to be set.
+     * @return void
+     * @since 1.0.0
+     */
     void
     Set( const int& );
 
+    /**
+     * @brief Gets the int value.
+     * @return const int& The stored int value.
+     * @since 1.0.0
+     */
     const int&
     Get( void ) const;
 
+    /**
+     * @brief Generates the JSONInteger as string.
+     *
+     * @param const unsigned int Indentation of this value.
+     * @return std::string String-coded int.
+     * @since 1.0.0
+     */
     std::string
     Generate( const unsigned int ) override;
 

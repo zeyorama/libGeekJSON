@@ -29,12 +29,23 @@
 namespace GeekJSON
 {
 
+  /**
+   * \brief Base class for all values descripted in JSON.
+   * @version 1.0.0
+   */
   class JSONValue
   {
   public:
     JSONValue( void ) { return; }
     virtual ~JSONValue( void ) { return; }
 
+    /**
+     * @brief Generates the JSONValue as string and returns it.
+     *
+     * @param const unsigned int Indentation of this value.
+     * @return std::string String-coded value in JSON style.
+     * @since 1.0.0
+     */
     virtual std::string Generate( const unsigned int ) = 0;
 
   protected:

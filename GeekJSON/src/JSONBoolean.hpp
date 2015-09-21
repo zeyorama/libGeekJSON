@@ -31,19 +31,48 @@
 namespace GeekJSON
 {
 
+  /**
+   * @brief Contains a bool value.
+   * @version 1.0.0
+   * @author Frank Kevin Zey
+   * @extends GeekJSON::JSONValue
+   */
   class JSONBoolean : public JSONValue
   {
   public:
+    /**
+     * @brief Initializes the JSONBoolean instance.
+     * @param const bool& The int value to be set.
+     * @since 1.0.0
+     */
     JSONBoolean( const bool& );
     virtual
     ~JSONBoolean( void );
 
+    /**
+     * @brief Sets a bool value.
+     * @param const bool& The int value to be set.
+     * @return void
+     * @since 1.0.0
+     */
     void
     Set( const bool& );
 
+    /**
+     * @brief Gets the bool value.
+     * @return const bool& The stored bool value.
+     * @since 1.0.0
+     */
     const bool&
     Get( void ) const;
 
+    /**
+     * @brief Generates the JSONBoolean as string.
+     *
+     * @param const unsigned int Indentation of this value.
+     * @return std::string String-coded bool.
+     * @since 1.0.0
+     */
     std::string
     Generate( const unsigned int ) override;
 

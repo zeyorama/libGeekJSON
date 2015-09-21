@@ -31,8 +31,21 @@
 namespace GeekJSON
 {
 
+  /**
+   * @brief Generates a JSONObject out of the given string.
+   *
+   * @param const std::string& The string to be parsed.
+   * @return JSONObject* The JSONObject containing all informations of the given string.
+   */
   JSONObject*
   ReadFromString( const std::string& );
+
+  /**
+   * @brief Generates a JSONObject out of a file by its given filename.
+   *
+   * @param const std::string& The filename as string.
+   * @return JSONObject* The JSONObject containing all informations stored in the file given by the filename.
+   */
   JSONObject*
   ReadFromFile( const std::string& );
 

@@ -31,19 +31,47 @@
 namespace GeekJSON
 {
 
+  /**
+   * @brief Contains a string value.
+   * @version 1.0.0
+   * @author Frank Kevin Zey
+   * @extends GeekJSON::JSONValue
+   */
   class JSONString : public JSONValue
   {
   public:
+    /**
+     * @brief Initializes the JSONString instance.
+     * @param const std::string& The string value to be set.
+     * @since 1.0.0
+     */
     JSONString( const std::string& );
     virtual
     ~JSONString( void );
 
+    /**
+     * @brief Sets a string value.
+     * @param const std::string& The string value to be set.
+     * @return void
+     * @since 1.0.0
+     */
     void
     Set( const std::string& );
 
+    /**
+     * @brief Generates the JSONString as string.
+     *
+     * @param const unsigned int Indentation of this value.
+     * @return std::string String-coded string.
+     * @since 1.0.0
+     */
     std::string
     Generate( const unsigned int ) override;
 
+    /**
+     * @return const std::string& Returns the current string value as constant.
+     * @since 1.0.0
+     */
     const std::string&
     Get( void ) const;
 
