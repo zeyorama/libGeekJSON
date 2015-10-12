@@ -382,10 +382,7 @@ namespace GeekJSON
   {
     ifstream file( JSONFile );
 
-    return ReadFromString ( string( std::istreambuf_iterator<char>( file ),
-                                    std::istreambuf_iterator<char>()
-                                  )
-                          );
+    return ReadFromString( string( istreambuf_iterator<char>( file ), istreambuf_iterator<char>() ) );
   }
 
 } /* namespace GeekJSON */
