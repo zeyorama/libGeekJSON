@@ -119,6 +119,14 @@ namespace GeekJSON
     return json;
   }
 
+  JSONValue*
+  JSONArray::operator []( const unsigned int& idx )
+  {
+    if ( idx >= m_List.size() ) return 0;
+
+    return m_List[ idx ];
+  }
+
 /* ************************************************** */
 /* ************************************************** */
 /* *******************  PROTECTED ******************* */

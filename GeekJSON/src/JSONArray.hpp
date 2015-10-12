@@ -38,6 +38,20 @@ namespace GeekJSON
   class JSONBoolean;
   class JSONInteger;
 
+  /**
+   * Contains a list of JSONValues.<br>
+   * <br>
+   * <strong>Changelog</strong>:<br>
+   * <em>1.0.1</em>: Added functionality
+   * <ul>
+   *  <li>Added array subscript operator</li>
+   * </ul>
+   * <em>1.0.0</em>: Basic implementation
+   *
+   * @author Frank Kevin Zey
+   * @version 1.0.1
+   * @see JSONValue
+   */
   class JSONArray : public JSONValue
   {
   public:
@@ -158,6 +172,17 @@ namespace GeekJSON
      */
     std::string
     Generate( const unsigned int ) override;
+
+    /**
+     * @brief Direct access to the element in the list.
+     *
+     * @param const unsigned int Index of requested value in list.
+     * @return JSONValue* The JSONValue instance, <em>NULL</em> if index out of bounds.
+     * @since 1.0.1
+     * @see JSONValue
+     */
+    JSONValue*
+    operator []( const unsigned int& );
 
   protected:
   private:
