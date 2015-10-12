@@ -30,13 +30,14 @@ namespace GeekJSON
 {
 
   /**
-   * \brief Base class for all values descripted in JSON.
+   * @brief Base class for all values descripted in JSON.
+   *
+   * @author Frank Kevin Zey
    * @version 1.0.0
    */
   class JSONValue
   {
   public:
-    JSONValue( void ) { return; }
     virtual ~JSONValue( void ) { return; }
 
     /**
@@ -49,6 +50,8 @@ namespace GeekJSON
     virtual std::string Generate( const unsigned int ) = 0;
 
   protected:
+    JSONValue( void ) { return; }
+
   private:
   };
 
